@@ -6,4 +6,5 @@
     <string name="derniers_plats">Derniers Plats</string>
     <string name="plat">Plat</string>
     <string name="description">Description</string>
+    <string name="popup_plat_name">popup_plat_name</string>
 </resources>

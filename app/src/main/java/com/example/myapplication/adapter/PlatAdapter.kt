@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.myapplication.MainActivity
+import com.example.myapplication.PlatRepository
 import com.example.myapplication.R
 import com.example.myapplication.fragments.PlatModel
 
@@ -33,6 +34,10 @@ class PlatAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
     val currentPlat = platList[position]
+
+        // recuperer le repository
+        val repo = PlatRepository()
+
        Glide.with(context).load(Uri.parse(currentPlat.imageUrl)).into(holder.platImage)
         holder.platName?.text = currentPlat.name
         holder.platDescription?.text = currentPlat.description
@@ -41,6 +46,13 @@ class PlatAdapter(
         }
         else{
             holder.starIcon.setImageResource(R.drawable.ic_unstar)
+        }
+        // rajouter une interaction sur l'étoile
+        holder.starIcon.setOnClickListener{
+            // inverse si le bouton est clicked ou non
+            currentPlat.liked = !currentPlat.liked
+            //mettre à jour l'objet plat
+            repo.updatePlat(currentPlat)
         }
     }
 

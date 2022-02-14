@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.MainActivity
+import com.example.myapplication.PlatRepository.Singleton.platList
 import com.example.myapplication.R
 import com.example.myapplication.adapter.PlatAdapter
 import com.example.myapplication.adapter.PlatItemDecoration
@@ -21,7 +22,8 @@ class HomeFragment(
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater?.inflate(R.layout.fragment_home, container, false)
-       val platList= arrayListOf<PlatModel>()
+
+     //  val platList= arrayListOf<PlatModel>()
 
      /*   platList.add(
             PlatModel(
