@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="cuizinet">Cuizinet</string>
+    <string name="d_couvrir">Découvrir</string>
+    <string name="home_page_last_plat">home_page_last_plat</string>
+    <string name="derniers_plats">Derniers Plats</string>
+    <string name="plat">Plat</string>
+    <string name="description">Description</string>
+</resources>
