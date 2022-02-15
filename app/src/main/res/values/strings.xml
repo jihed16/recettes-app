@@ -7,4 +7,10 @@
     <string name="plat">Plat</string>
     <string name="description">Description</string>
     <string name="popup_plat_name">popup_plat_name</string>
+    <string name="popup_plant_description_title">popup_plant_description_title</string>
+    <string name="popup_plat_description_title" />
+    <string name="description_plat_pop">description_plat_pop</string>
+    <string name="popup_petite_description">popup_petite_description</string>
+    <string name="temps_de_cuisson">Temps de cuisson</string>
+    <string name="temp_rature">Température</string>
 </resources>
