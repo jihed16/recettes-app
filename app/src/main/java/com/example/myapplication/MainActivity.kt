@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.myapplication.fragments.CollectionFragment
 import com.example.myapplication.fragments.HomeFragment
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         // injecter le fragment
         val transaction  = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container, HomeFragment(this))
+        transaction.replace(R.id.fragment_container, CollectionFragment (this))
         transaction.addToBackStack(null)
         transaction.commit()
         }
