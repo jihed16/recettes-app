@@ -47,7 +47,8 @@ class PlatRepository {
         // mettre à jour l'objet plat dans la BDD
 
         fun updatePlat (plat: PlatModel) = databaseRef.child(plat.id).setValue(plat)
-
+// supprimer le plat de la base
+    fun deletePlat (plat: PlatModel) = databaseRef.child(plat.id).removeValue()
 
 
 }

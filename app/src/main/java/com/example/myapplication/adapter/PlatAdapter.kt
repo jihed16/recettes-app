@@ -9,12 +9,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.myapplication.MainActivity
+import com.example.myapplication.PlatPopup
 import com.example.myapplication.PlatRepository
 import com.example.myapplication.R
 import com.example.myapplication.fragments.PlatModel
 
 class PlatAdapter(
-    private val context: MainActivity,
+    val context: MainActivity,
     private val platList: List<PlatModel>,
     private val layoutId: Int
     ) :RecyclerView.Adapter<PlatAdapter.ViewHolder>(){
@@ -53,6 +54,11 @@ class PlatAdapter(
             currentPlat.liked = !currentPlat.liked
             //mettre à jour l'objet plat
             repo.updatePlat(currentPlat)
+        }
+        // interaction lors du click sur un plat
+        holder.itemView.setOnClickListener{
+            // afficher la popup
+            PlatPopup(this,currentPlat).show()
         }
     }
 
