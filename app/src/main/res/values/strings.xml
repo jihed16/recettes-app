@@ -13,4 +13,19 @@
     <string name="popup_petite_description">popup_petite_description</string>
     <string name="temps_de_cuisson">Temps de cuisson</string>
     <string name="temp_rature">Température</string>
+    <string name="plat_name">plat name</string>
+    <string name="nom_du_plat">nom du plat</string>
+    <string name="description_du_plat">description du plat</string>
+    <string name="confirmer">Confirmer</string>
+    <string name="charger_image">CHARGER IMAGE</string>
+    <string-array name="add_plat_temps">
+        <item> Temps de cuisson : 30 </item>
+        <item> Temps de cuisson : 60 </item>
+        <item> Temps de cuisson : 75 </item>
+    </string-array>
+    <string-array name="add_plat_temp">
+        <item> Temperature : 180 </item>
+        <item> Temperature : 200 </item>
+        <item> Temperature : 220 </item>
+    </string-array>
 </resources>

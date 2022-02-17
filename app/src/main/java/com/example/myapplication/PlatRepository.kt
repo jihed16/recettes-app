@@ -1,17 +1,31 @@
 package com.example.myapplication
 
+import android.net.Uri
 import com.example.myapplication.PlatRepository.Singleton.databaseRef
 import com.example.myapplication.PlatRepository.Singleton.platList
+import com.example.myapplication.PlatRepository.Singleton.storageReference
 import com.example.myapplication.fragments.PlatModel
+import com.google.android.gms.tasks.Task
+
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.storage.FirebaseStorage
+//import com.google.firebase.storage.FirebaseStorage
+//import com.google.firebase.storage.UploadTask
+import java.net.URI
+
+import java.util.*
 import javax.security.auth.callback.Callback
+import kotlin.coroutines.Continuation
 
 class PlatRepository {
     object Singleton {
-
+        // donner lien du bucket
+        private val BUCKET_URL : String ="gs://recettescuisine-f9e71.appspot.com"
+  // se connecter à notre espace de stockage
+        val storageReference = FirebaseStorage.getInstance().getReferenceFromUrl(BUCKET_URL)
         // se connecter à la référence plat
     val databaseRef = FirebaseDatabase.getInstance().getReference("plat")
 
@@ -44,6 +58,25 @@ class PlatRepository {
 
         })
     }
+    // créer une fonction pour envoyer des fichiers sur le storage
+
+   fun  uploadImage(file: Uri){
+       // vérifier si ce fichier est null
+       if(file!=null){
+           val fileName = UUID.randomUUID().toString() + ".jpg"
+           val ref = storageReference.child(fileName)
+           val uploadTask = ref.putFile(file)
+
+           // démarrer la tâche d'envoi
+
+
+
+
+
+
+
+       }
+   }
         // mettre à jour l'objet plat dans la BDD
 
         fun updatePlat (plat: PlatModel) = databaseRef.child(plat.id).setValue(plat)
