@@ -1,9 +1,19 @@
 <resources>
     <string name="app_name">My Application</string>
+
+    <string name="bottom_home_item">Accueil</string>
+    <string name="bottom_collection_item">Plats</string>
+    <string name="bottom_add_plat_item">Ajouter</string>
+
+
     <string name="cuizinet">Cuizinet</string>
-    <string name="d_couvrir">Découvrir</string>
+    <string name="home_page_title">Découvrir</string>
+
     <string name="home_page_last_plat">home_page_last_plat</string>
     <string name="derniers_plats">Derniers Plats</string>
+    <string name="collection_page_title">Ma Collection</string>
+    <string name="add_plat_page_title">Ajout d\'un plat</string>
+
     <string name="plat">Plat</string>
     <string name="description">Description</string>
     <string name="popup_plat_name">popup_plat_name</string>

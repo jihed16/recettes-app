@@ -2,6 +2,8 @@ package com.example.myapplication
 
 import android.net.Uri
 import com.example.myapplication.PlatRepository.Singleton.databaseRef
+
+import com.example.myapplication.PlatRepository.Singleton.downloadUri
 import com.example.myapplication.PlatRepository.Singleton.platList
 import com.example.myapplication.PlatRepository.Singleton.storageReference
 import com.example.myapplication.fragments.PlatModel
@@ -13,7 +15,8 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
 //import com.google.firebase.storage.FirebaseStorage
-//import com.google.firebase.storage.UploadTask
+//import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.UploadTask
 import java.net.URI
 
 import java.util.*
@@ -31,6 +34,8 @@ class PlatRepository {
 
     // créer une liste qui va contenir les plats
     val platList = arrayListOf<PlatModel>()
+        // contient le lien de l'umage courante
+        var downloadUri: Uri? = null
 }
     fun updateData(callback:  () -> Unit) {
         //absorber les données depuis la datrabaseref
@@ -60,7 +65,7 @@ class PlatRepository {
     }
     // créer une fonction pour envoyer des fichiers sur le storage
 
-   fun  uploadImage(file: Uri){
+   fun  uploadImage(file: Uri, callback:() -> Unit){
        // vérifier si ce fichier est null
        if(file!=null){
            val fileName = UUID.randomUUID().toString() + ".jpg"
@@ -70,18 +75,34 @@ class PlatRepository {
            // démarrer la tâche d'envoi
 
 
+uploadTask.continueWithTask(com.google.android.gms.tasks.Continuation<UploadTask.TaskSnapshot, Task<Uri>> { task ->
+       if(!task.isSuccessful){
+           task.exception?.let { throw it }
+       }
+    return@Continuation ref.downloadUrl
+}).addOnCompleteListener { task ->
 
-
+    if(task.isSuccessful){
+       // récupérer l'image
+        downloadUri = task.result
+        callback()
+    }
+}
 
 
 
        }
    }
         // mettre à jour l'objet plat dans la BDD
-
         fun updatePlat (plat: PlatModel) = databaseRef.child(plat.id).setValue(plat)
-// supprimer le plat de la base
-    fun deletePlat (plat: PlatModel) = databaseRef.child(plat.id).removeValue()
+
+        // Inserer un nouveau plat à la bdd
+        fun insertPlat (plat: PlatModel) = databaseRef.child(plat.id).setValue(plat)
+
+        // supprimer le plat de la base
+        fun deletePlat (plat: PlatModel) = databaseRef.child(plat.id).removeValue()
 
 
 }
+
+

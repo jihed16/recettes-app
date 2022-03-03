@@ -27,30 +27,30 @@
         android:id="@+id/name_input"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginTop="5dp"
         android:hint="@string/nom_du_plat"
         android:paddingLeft="@dimen/default_margin"/>
     <EditText
         android:id="@+id/description_input"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginTop="15dp"
         android:hint="@string/description_du_plat"
         android:paddingLeft="@dimen/default_margin"/>
     <Spinner
         android:id="@+id/temps_cuisson_spinner"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginTop="2dp"
         android:entries="@array/add_plat_temps"
         android:paddingLeft="@dimen/default_margin"/>
     <Spinner
         android:id="@+id/temperature_spinner"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginTop="2dp"
         android:entries="@array/add_plat_temp"
-        android:paddingLeft="@dimen/default_margin"/>
+        android:paddingLeft="20dp"/>
     <Button
         android:id="@+id/confirm_button"
         android:layout_width="match_parent"

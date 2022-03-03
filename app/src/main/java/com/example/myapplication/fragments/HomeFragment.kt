@@ -56,7 +56,7 @@ class HomeFragment(
             */
 
         val horizontalRecyclerView = view.findViewById<RecyclerView>(R.id.horizontal_Recycler_view)
-       horizontalRecyclerView.adapter = PlatAdapter(context,platList,R.layout.item_horizontal_plat)
+       horizontalRecyclerView.adapter = PlatAdapter(context,platList.filter {!it.liked },R.layout.item_horizontal_plat)
 
         val verticalRecyclerView = view.findViewById<RecyclerView>(R.id.vertical_Recycler_view)
         verticalRecyclerView.adapter = PlatAdapter(context,platList,R.layout.item_vertical_plat)
