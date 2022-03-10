@@ -39,6 +39,8 @@
         android:layout_height="wrap_content"
         android:text="@string/plat"
         android:layout_marginLeft="@dimen/item_margin"
+        style="@style/subtitletextstyle"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/view_separation"
         app:layout_constraintStart_toEndOf="@+id/cardView" />
 
@@ -47,6 +49,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/description"
+        style="@style/defaulttextstyle"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/name_item"
         app:layout_constraintTop_toBottomOf="@+id/view_separation" />
 

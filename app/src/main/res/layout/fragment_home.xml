@@ -19,7 +19,9 @@
     android:layout_height="wrap_content"
     android:text="@string/derniers_plats"
     android:layout_marginLeft="@dimen/default_margin"
+        style="@style/titletextstyle"
     android:layout_marginTop="@dimen/default_margin"
+        android:textColor="@color/black"
     />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/vertical_Recycler_view"
@@ -27,6 +29,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/default_margin"
         android:layout_marginLeft="@dimen/default_margin"
+        android:textColor="@color/black"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 </LinearLayout>
