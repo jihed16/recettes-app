@@ -1,0 +1,58 @@
+{
+  "plat" : {
+    "443d65d8-a571-4656-bc84-4cef4451cdf4" : {
+      "description" : "plat italien",
+      "id" : "443d65d8-a571-4656-bc84-4cef4451cdf4",
+      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/recettescuisine-f9e71.appspot.com/o/6a13f133-875b-4b27-a0cd-7dbce4f07a6d.jpg?alt=media&token=0121929d-4ba4-4b58-9652-b691dc20497f",
+      "liked" : false,
+      "name" : "spaghetti",
+      "temperature" : "Temperature : 200",
+      "temps_cuisson" : "Temps de cuisson : 30"
+    },
+    "4a042984-4d54-44ec-abad-d19839bade97" : {
+      "description" : "plat tunisien",
+      "id" : "4a042984-4d54-44ec-abad-d19839bade97",
+      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/recettescuisine-f9e71.appspot.com/o/19635b0c-0f44-468a-ad4f-ac18019561d2.jpg?alt=media&token=00fa5940-4f04-4e51-af6a-440e1861d9c6",
+      "liked" : false,
+      "name" : "kafteji",
+      "temperature" : "Temperature : 180",
+      "temps_cuisson" : "Temps de cuisson : 60"
+    },
+    "plat1" : {
+      "description" : "plat tunisien",
+      "id" : "plat1",
+      "imageUrl" : "https://cdn.pixabay.com/photo/2018/05/29/20/47/couscous-3440042_960_720.jpg",
+      "liked" : false,
+      "name" : "couscous",
+      "temperature" : "220",
+      "temps_cuisson" : "30"
+    },
+    "plat2" : {
+      "description" : "plat italien",
+      "id" : "plat2",
+      "imageUrl" : "https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_960_720.jpg",
+      "liked" : true,
+      "name" : "pizza",
+      "temperature" : "180",
+      "temps_cuisson" : "20"
+    },
+    "plat3" : {
+      "description" : "plat tunisien",
+      "id" : "plat3",
+      "imageUrl" : "https://cdn.pixabay.com/photo/2018/05/29/20/47/couscous-3440042_960_720.jpg",
+      "liked" : true,
+      "name" : "couscouss",
+      "temperature" : "200",
+      "temps_cuisson" : "60"
+    },
+    "plat4" : {
+      "description" : "plat italien",
+      "id" : "plat4",
+      "imageUrl" : "https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_960_720.jpg",
+      "liked" : false,
+      "name" : "pizzaa",
+      "temperature" : "150",
+      "temps_cuisson" : "30"
+    }
+  }
+}
